@@ -1,6 +1,7 @@
 let hour, min, sec;
 let timer;
 
+
 function set10() {
     document.querySelector("#startMin").value = 10;
 }
@@ -40,12 +41,19 @@ function countTimer() {
             } else {
                 resetTimer();
                 clearInterval(timer);
-                alert("타이머 종료");
+                playAlertSound();
             }
         }
     }
     document.querySelector("#display").innerText = hour + ":" + min + ":" + sec;
 }
+
+function playAlertSound() {
+    const audio = new Audio('alert.mp3');
+    audio.play();
+    setTimeout(function(){alert("타이머 종료")},100);
+}
+
 
 function stopTimer() {
     // STOP 버튼 클릭 시 카운트 다운 정지
@@ -75,3 +83,5 @@ function currentTime() {
 }
 currentTime();
 setInterval(currentTime, 1000);
+
+
