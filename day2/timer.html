@@ -61,19 +61,20 @@
             <button type="button" class="btn btn-secondary" onclick="resetTimer()">RESET</button>
         </div>
     </div>
+
+    <div class="alert alert-info" id="currentTime">
+    </div>
+
     <div id="inputTimer" class="col-md-6">
     <h4>시간을 입력해주세요</h4>
         <div class="input-group input-group-sm">
-            <input type="text" class="form-control" id="startHour">
+            <input type="number" class="form-control" id="startHour" placeholder="00">
             <span class="input-group-text">시</span>
-            <input type="text" class="form-control" id="startMin">
+            <input type="number" class="form-control" id="startMin" placeholder="00">
             <span class="input-group-text">분</span>
-            <input type="text" class="form-control" id="startSec">
+            <input type="number" class="form-control" id="startSec" placeholder="00">
             <span class="input-group-text">초</span>
         </div>
-    </div>
-
-    <div class="alert alert-info" id="currentTime">
     </div>
 
 </div>
