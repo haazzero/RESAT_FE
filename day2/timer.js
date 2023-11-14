@@ -1,51 +1,64 @@
 let hour, min, sec;
 let timer;
 
+function set10() {
+    document.querySelector("#startMin").value = 10;
+}
+function set15() {
+    document.querySelector("#startMin").value = 15;
+}
+function set30() {
+    document.querySelector("#startMin").value = 30;
+}
+
 function startTimer() {
-    //START 버튼 클릭 시 입력 영역 사라짐
-    document.getElementById("inputTimer").style.display ='none';
-    hour = document.querySelector("#startHour").value; 
-    if (hour === "") hour = 0;		
-    min = document.querySelector("#startMin").value; 
+    // START 버튼 클릭 시 입력 영역 사라짐
+    document.getElementById("inputTimer").style.display = 'none';
+    document.getElementById("outoTimer").style.display = 'none';
+
+    hour = document.querySelector("#startHour").value;
+    if (hour === "") hour = 0;
+    min = document.querySelector("#startMin").value;
     if (min === "") min = 0;
     sec = document.querySelector("#startSec").value;
     if (sec === "") sec = 0;
     timer = setInterval(countTimer, 1000);
-  }
+}
 
 function countTimer() {
-if (sec != 0) {
-    sec--;
-    document.querySelector("#display").innerText =
-    hour + ":" + min + ":" + sec;
-} else {
-    if (min != 0) {
-        min--;
-        sec = 59;
+    if (sec != 0) {
+        sec--;
     } else {
-        if (hour != 0) {
-            hour--;
-            min = 59;
+        if (min != 0) {
+            min--;
             sec = 59;
         } else {
-            resetTimer();
-            clearInterval(timer);
-            alert("타이머 종료");
+            if (hour != 0) {
+                hour--;
+                min = 59;
+                sec = 59;
+            } else {
+                resetTimer();
+                clearInterval(timer);
+                alert("타이머 종료");
+            }
         }
     }
-}
+    document.querySelector("#display").innerText = hour + ":" + min + ":" + sec;
 }
 
 function stopTimer() {
-    //STOP 버튼 클릭 시 카운트 다운 정지
+    // STOP 버튼 클릭 시 카운트 다운 정지
     clearInterval(timer);
-  }
+}
 
 function resetTimer() {
-     //RESET 버튼 클릭 시 입력 영역 나타남
-    document.getElementById("inputTimer").style.display ='block';	
+    clearInterval(timer);
+    // RESET 버튼 클릭 시 입력 영역 나타남
+    document.getElementById("inputTimer").style.display = 'block';
+    document.getElementById("outoTimer").style.display = 'block';
 
-    document.querySelector("#display").innerText = "00 : 00 : 00"; 
+    document.querySelector("#display").innerText = "00 : 00 : 00";
 
     document.getElementById("startHour").value = "";
     document.getElementById("startMin").value = "";
@@ -53,13 +66,12 @@ function resetTimer() {
 }
 
 function currentTime() {
-    const date = new Date()
-    const hour = String(date.getHours()).padStart(2,"0");
-    const minutes = String(date.getMinutes()).padStart(2,"0");
-    const second = String(date.getSeconds()).padStart(2,"0");
+    const date = new Date();
+    const currentHour = String(date.getHours()).padStart(2, "0");
+    const currentMinutes = String(date.getMinutes()).padStart(2, "0");
+    const currentSecond = String(date.getSeconds()).padStart(2, "0");
 
-    document.querySelector("#currentTime").innerText = '현재 시간은 ' + `${hour}:${minutes}:${second}` + ' 입니다';
-    }
-
+    document.querySelector("#currentTime").innerText = '현재 시간은 ' + `${currentHour}:${currentMinutes}:${currentSecond}` + ' 입니다';
+}
 currentTime();
 setInterval(currentTime, 1000);
