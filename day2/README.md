@@ -1,4 +1,6 @@
 # 미션 - 카운트다운 타이머 만들기
+<a href="https://haazzero.github.io/RESAT_FE/day2/timer.html">체험 해보기</a>
+<img src="exTimer.png">
 
 ## 🔍 요청사항
 - [v] 시간, 분, 초를 입력하는 영역이 존재한다.
@@ -25,4 +27,5 @@
 - HTML 요소 보이기/숨기기
 - 웹폰트 적용
 - 자바스크립트 시간 계산 및 오늘날짜 함수
-- <audio>태그
+- '<audio>'태그
+- 깃헙 웹 호스팅
