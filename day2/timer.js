@@ -2,8 +2,8 @@ let min, sec, hour;
 let timer;
 
 function startTimer() {
+    //START 버튼 클릭 시 입력 영역 사라짐
     document.getElementById("inputTimer").style.display ='none';		
-
     min = document.querySelector("#startMin").value; 
     if (min === "") min = 0;
     sec = document.querySelector("#startSec").value;
@@ -21,7 +21,7 @@ if (sec != 0) {
     min--;
     sec = 59;
     } else {
-    clearTimer(timer, "타이머 종료");
+        resetTimer(timer, "타이머 종료");
     }
 }
 }
@@ -29,14 +29,11 @@ if (sec != 0) {
 function stopTimer() {
   }
 
-function resetTimer() { // 리셋 버튼 연결
-clearTimer(timer, "리셋 종료");
-}
-
-function clearTimer(t, text) {
+function resetTimer() {
+     //RESET 버튼 클릭 시 입력 영역 나타남
     document.getElementById("inputTimer").style.display ='block';	
-    clearInterval(t);
-    document.getElementById("display").innerText = text;
+    
+    document.getElementById("startHour").value = "";
     document.getElementById("startMin").value = "";
     document.getElementById("startSec").value = "";
-  }
+}
