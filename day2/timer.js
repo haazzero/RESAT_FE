@@ -17,7 +17,7 @@ function startTimer() {
     if (sec != 0) {
         sec--;
         document.querySelector("#display").innerText =
-        min + "분" + sec + "초 남았습니다.";
+        hour + ":" + min + ":" + sec;
     } else {
         if (min != 0) {
             min--;
@@ -40,7 +40,7 @@ function resetTimer() {
     document.getElementById("inputTimer").style.display ='block';	
 
     document.querySelector("#display").innerText =
-    hour + ":" min + ":" + sec
+    "00 : 00 : 00"; 
 
     document.getElementById("startHour").value = "";
     document.getElementById("startMin").value = "";
