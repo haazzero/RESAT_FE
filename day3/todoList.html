@@ -9,41 +9,73 @@
 <style>
 /* 폰트 적용 */
 @font-face {
-    font-family: 'GangwonEdu_OTFBoldA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-body{ font-family: 'GangwonEdu_OTFBoldA', sans-serif; }   
-#todoList { margin-left: 20px; }
+body{ font-family: 'Cafe24Ssurround', sans-serif; }   
 #remove{ visibility: hidden; }
+li input[type="li"] {
+    visibility: hidden;
+}
+
+li.completed span {
+   color: lightgray;
+}
+#selectBtn{
+	margin-bottom: 10px;
+}
+#todoListBox{
+	text-align: center;
+	margin-top: 30px;
+}
+#inputTodoList{
+	position: relative;
+	text-align: center;
+}
+
+/* 우선순위에 따른 배지 스타일 추가 */
+li span.badge-very-high {
+    background-color:#B0578D;
+}
+li span.badge-high {
+    background-color: #D988B9;
+}
+li span.badge-normal {
+    background-color: #FACBEA;
+}
+li span.badge-low {
+    background-color: #FFE4D6;
+}
 </style>
 
 </head>
 <body>
 	
 	<div id="todoListBox">
-		<h3 style="margin-left: 50px;">TO-DO LIST</h3>
-
+		<h3>TO-DO LIST ✔</h3>
+		<div id="selectBtn">
 		<button type="button" class="btn btn-secondary btn-sm" onclick="showAll()">전체</button>
 		<button type="button" class="btn btn-secondary btn-sm" onclick="showCompleted()">완료</button>
 		<button type="button" class="btn btn-secondary btn-sm" onclick="showIncomplete()">미완료</button>
-		<button type="button" class="btn btn-secondary btn-sm" onclick="sortPriorityAscending()">우선순위 높은순</button> <!-- 수정: 우선순위 높은순 정렬 버튼 추가 -->
-		<button type="button" class="btn btn-secondary btn-sm" onclick="sortPriorityDescending()">우선순위 낮은순</button> <!-- 수정: 우선순위 낮은순 정렬 버튼 추가 -->
-
+		<button type="button" class="btn btn-light  btn-sm" onclick="sortPriorityAscending()">우선순위 높은순</button> <!-- 수정: 우선순위 높은순 정렬 버튼 추가 -->
+		<button type="button" class="btn btn-light  btn-sm" onclick="sortPriorityDescending()">우선순위 낮은순</button> <!-- 수정: 우선순위 낮은순 정렬 버튼 추가 -->
+		</div>
+		<br>
 
 		<form>
-         <input type="text" id="todo" autofocus placeholder="할 일을 입력하세요">
+         <input type="text" id="todo" style="text-align: center;" autofocus placeholder="할 일을 입력하세요">
 		 <select style="height: 30px;">
-			<option value="very-high">아주높음</option>
-			<option value="high">높음</option>
-			<option value="normal">보통</option>
-			<option value="low">낮음</option>
+			<option value="아주높음">아주높음</option>
+			<option value="높음">높음</option>
+			<option value="보통">보통</option>
+			<option value="낮음">낮음</option>
 		 </select>
          <button type="button" id="add" class="btn btn-primary btn-sm" onclick="addTodo()">추가</button>	
-         <button type="button" id="remove"  class="btn btn-danger btn-sm" onclick="removeTodo()">모두 지우기</button>		
-         </form>
-         <ul id="todoList">
+         <button type="button" id="remove"  class="btn btn-danger btn-sm" onclick="removeTodo()">모두 지우기</button>         </form>
+         <br>		
+		<ul id="todoList"></ul>
     </div> 
     
 	<!-- 부트스트랩 -->
@@ -73,9 +105,21 @@ body{ font-family: 'GangwonEdu_OTFBoldA', sans-serif; }
 				
 				var priority = document.createElement('span');
 				priority.textContent = document.querySelector('select').value;
-				
+
+				if (priority.textContent === '아주높음') {
+					priority.classList.add('badge', 'rounded-pill', 'badge-very-high');
+				} else if (priority.textContent === '높음') {
+					priority.classList.add('badge', 'rounded-pill', 'badge-high');
+				} else if (priority.textContent === '보통') {
+					priority.classList.add('badge', 'rounded-pill', 'badge-normal');
+				} else {
+					priority.classList.add('badge', 'rounded-pill', 'badge-low');
+				}
+
 				var editButton = document.createElement('button');
-				editButton.textContent = '수정하기';
+				editButton.textContent = '수정';
+				editButton.classList.add('btn', 'btn-success', 'btn-sm'); // 버튼에 class 추가
+
 				editButton.addEventListener('click', function() {
 					var newTodoText = prompt('수정할 내용을 입력하세요.');
 					if (newTodoText !== null) {
