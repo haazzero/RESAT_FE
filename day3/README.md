@@ -1,6 +1,6 @@
 # 미션 - To-Do 리스트 만들기
-<a href="배포링크">체험 해보기</a>
-<img src="예시이미지">
+<a href="https://haazzero.github.io/RESAT_FE/day3/todoList.html">체험 해보기</a>
+<img src="exTodoList.png">
 
 ## 🔍 요청사항
 - [v] 할 일을 작성할 수 있는 영역이 존재한다.
