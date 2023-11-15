@@ -25,9 +25,11 @@ body{ font-family: 'GangwonEdu_OTFBoldA', sans-serif; }
 	<div id="todoListBox">
 		<h3 style="margin-left: 50px;">TO-DO LIST</h3>
 
-		<button type="button" class="btn btn-secondary btn-sm" onclick="showAll()">전체</button> <!-- 수정: onclick 함수명 변경 -->
-		<button type="button" class="btn btn-secondary btn-sm" onclick="showCompleted()">완료</button> <!-- 수정: onclick 함수명 변경 -->
-		<button type="button" class="btn btn-secondary btn-sm" onclick="showIncomplete()">미완료</button> <!-- 수정: onclick 함수명 변경 -->
+		<button type="button" class="btn btn-secondary btn-sm" onclick="showAll()">전체</button>
+		<button type="button" class="btn btn-secondary btn-sm" onclick="showCompleted()">완료</button>
+		<button type="button" class="btn btn-secondary btn-sm" onclick="showIncomplete()">미완료</button>
+		<button type="button" class="btn btn-secondary btn-sm" onclick="sortPriorityAscending()">우선순위 높은순</button> <!-- 수정: 우선순위 높은순 정렬 버튼 추가 -->
+		<button type="button" class="btn btn-secondary btn-sm" onclick="sortPriorityDescending()">우선순위 낮은순</button> <!-- 수정: 우선순위 낮은순 정렬 버튼 추가 -->
 
 
 		<form>
@@ -69,12 +71,22 @@ body{ font-family: 'GangwonEdu_OTFBoldA', sans-serif; }
 				var todoText = document.createElement('span');
 				todoText.textContent = todoInput.value;
 				
-				var priority = document.createElement('span'); // 수정: 우선순위를 표시할 span 엘리먼트 생성
-				priority.textContent = document.querySelector('select').value; // 수정: 선택된 우선순위 값을 텍스트로 설정
+				var priority = document.createElement('span');
+				priority.textContent = document.querySelector('select').value;
+				
+				var editButton = document.createElement('button');
+				editButton.textContent = '수정하기';
+				editButton.addEventListener('click', function() {
+					var newTodoText = prompt('수정할 내용을 입력하세요.');
+					if (newTodoText !== null) {
+						todoText.textContent = newTodoText;
+					}
+				});
 				
 				li.appendChild(checkbox);
 				li.appendChild(todoText);
-				li.appendChild(priority); // 수정: 우선순위를 li 엘리먼트의 자식으로 추가
+				li.appendChild(priority);
+				li.appendChild(editButton);
 				todoList.appendChild(li);
 				
 				todoInput.value = '';
@@ -144,6 +156,34 @@ body{ font-family: 'GangwonEdu_OTFBoldA', sans-serif; }
 				} else {
 					todo.style.display = 'none';
 				}
+			});
+		}
+
+		// '우선순위 높은순' 버튼을 클릭하면 할 일을 우선순위 높은 순으로 정렬하는 함수
+		function sortPriorityAscending() {
+			var todos = todoList.querySelectorAll('li');
+			var sortedTodos = Array.from(todos).sort(function(a, b) {
+				var priorityA = a.querySelector('span:nth-child(3)').textContent;
+				var priorityB = b.querySelector('span:nth-child(3)').textContent;
+				return priorityA.localeCompare(priorityB);
+			});
+			todoList.innerHTML = '';
+			sortedTodos.forEach(function(todo) {
+				todoList.appendChild(todo);
+			});
+		}
+
+		// '우선순위 낮은순' 버튼을 클릭하면 할 일을 우선순위 낮은 순으로 정렬하는 함수
+		function sortPriorityDescending() {
+			var todos = todoList.querySelectorAll('li');
+			var sortedTodos = Array.from(todos).sort(function(a, b) {
+				var priorityA = a.querySelector('span:nth-child(3)').textContent;
+				var priorityB = b.querySelector('span:nth-child(3)').textContent;
+				return priorityB.localeCompare(priorityA);
+			});
+			todoList.innerHTML = '';
+			sortedTodos.forEach(function(todo) {
+				todoList.appendChild(todo);
 			});
 		}
     </script>
