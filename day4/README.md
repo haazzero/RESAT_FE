@@ -1,6 +1,6 @@
 # 미션 - date 객체를 활용한 캘린더 만들기
-<a href="">체험 해보기</a>
-<img src="exCalendar">
+<a href="https://haazzero.github.io/RESAT_FE/day4/calendar.html">체험 해보기</a>
+<img src="exCalendar.png">
 
 ## 🔍 요청사항
 - [v] 달력을 만들고 좌우 화살표를 누르면 해당하는 월로 넘어갑니다.
