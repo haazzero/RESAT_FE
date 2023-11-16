@@ -24,7 +24,7 @@ body{ font-family: 'Cafe24Ssurround', sans-serif; }
     justify-content: center;
     align-items: center;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 45px;
     line-height: 78px;
 }
 
@@ -124,7 +124,6 @@ body{ font-family: 'Cafe24Ssurround', sans-serif; }
 </head>
 <body>
 	<div class="calendar">
-		<h3>Calendar 🗓</h3>
         <div class="cal_nav">
             <a href="javascript:;" class="nav-btn go-prev">prev</a>
             <div class="year-month"></div>
@@ -143,6 +142,34 @@ body{ font-family: 'Cafe24Ssurround', sans-serif; }
             <div class="dates"></div>
         </div>
 	</div>
+
+<!-- Modal창 --------------------------->
+<div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+       
+        <!-- 헤더 -->
+        <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">일정 입력📝</h4>
+        </div>
+        <!-- 메모 입력창 -->
+        <div class="modal-body">
+            <div class="form-group">
+                <label>오늘의 날짜</label>
+                <input type="text" name="consultNo" id="consultNo"
+                     class="inputZero" readonly style="margin-bottom: 5px">
+        </div>
+        <!-- 푸터 -->
+        <div class="modal-footer">
+                <button id="modBtn" type="button" class="btn btn-warning">수정</button>
+                <button id="addBtn" type="button" class="btn btn-primary">등록</button>
+                <button id="closeBtn" type="button" class="btn btn-light" data-dismiss="modal">닫기</button>
+        </div>
+
+    </div><!-- /.modal-content -->
+</div> <!-- /.modal-dialog -->
+</div> <!-- /.modal -->
+<!-- END Modal창 --------------------------->
     
 <!-- 부트스트랩 -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
@@ -243,6 +270,29 @@ function calendarInit() {
         renderCalender(thisMonth); 
     });
 }
+
+
+// 메모 모달창 -------------------------------------------------- 
+var modal = $('#calendarModal');
+
+	//날짜 1개 누르면 모달 창 표시
+	$('.dates').on('click', function() {
+		modal.find('input').val(''); // input에 입력되어있는 값들을 모두 지우기! 안 그러면 전에 작성한 값들이 남음
+		// modal.find("button[id != 'closeBtn']").hide(); // close 버튼 빼고 다 숨김
+		// addBtn.show(); // 등록 버튼을 눌렀으니 add만 보이게 함
+		//plusBtn.show();                        // #으로 가져올 때 등록 버튼을 눌렀으니 add만 보이게 함
+		modal.modal('show');
+		// modal.find('#consultNo').val(consultNoVal); //견적상담 번호를 자동으로 표시
+	});
+	// END 날짜 1개 누르면 모달 창 표시
+
+    // 모달 창 닫기
+    $('#closeBtn').on('click', function() {
+        modal.modal('hide');
+    });
+
+// END 메모 모달창 -------------------------------------------------- 
+
 </script>
 
 </body>
