@@ -23,5 +23,6 @@
 
 ### TIL
 - 제이쿼리는 지양해야하는건가?
-- 전역변수 선언하기
-- fake api 사용 - json server (메모를 등록, 수정, 조회 해야하기 때문에)
+- (x) 전역변수 선언하기
+- (x) fake api 사용 - json server (메모를 등록, 수정, 조회 해야하기 때문에)
+- list-style-image :
