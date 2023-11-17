@@ -10,6 +10,10 @@ RESAT 프론트앤드 개발 챌린지 5기 레포지토리
 - <a href="https://haazzero.github.io/RESAT_FE/day3/todoList.html">✔ day3 : To-Do 리스트 체험하기</a>
 
 #### day4
-- <a href="https://github.com/haazzero/RESAT_FE/tree/main/day4">🗓 day3 : 캘린더 만들기 소스코드</a>
-- <a href="https://haazzero.github.io/RESAT_FE/day4/calendar.html">🗓 day3 : 캘린더 체험하기</a>
+- <a href="https://github.com/haazzero/RESAT_FE/tree/main/day4">🗓 day4 : 캘린더 만들기 소스코드</a>
+- <a href="https://haazzero.github.io/RESAT_FE/day4/calendar.html">🗓 day4 : 캘린더 체험하기</a>
+
+#### day5
+- <a href="https://github.com/haazzero/RESAT_FE/tree/main/day5">🗓 day5 : 미니인턴 서비스 메인페이지 클론 소스코드</a>
+- <a href="https://haazzero.github.io/RESAT_FE/day5/">🗓 day5 : 미니인턴 서비스 메인페이지 클론 체험하기</a>
 
