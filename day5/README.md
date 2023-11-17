@@ -11,8 +11,10 @@
 ## 추가 요청사항
 
 ## issue
-
+- 일정 문제로 일단 부트스트랩 템플릿으로 구현
 
 ### TIL
 - 개발자 도구 활용법
     - 개발자 도구를 활용하여 미니인턴 홈페이지 구조를 본다
+- CSS 파일을 HTML 파일과 연결하기
+- Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
