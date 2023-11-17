@@ -1,6 +1,6 @@
 # 미션 - 미니인턴 서비스 메인페이지 클론
-<a href="">체험 해보기</a>
-<img src="">
+<a href="https://haazzero.github.io/RESAT_FE/day5/miniintern.html">체험 해보기</a>
+<img src="exMini.png">
 
 ## 🔍 요청사항
 - 미니인턴 서비스 메인 페이지

@@ -15,5 +15,4 @@ RESAT 프론트앤드 개발 챌린지 5기 레포지토리
 
 #### day5
 - <a href="https://github.com/haazzero/RESAT_FE/tree/main/day5">🗓 day5 : 미니인턴 서비스 메인페이지 클론 소스코드</a>
-- <a href="https://haazzero.github.io/RESAT_FE/day5/">🗓 day5 : 미니인턴 서비스 메인페이지 클론 체험하기</a>
-
+- <a href="https://haazzero.github.io/RESAT_FE/day5//miniintern.html">🗓 day5 : 미니인턴 서비스 메인페이지 클론 체험하기</a>
