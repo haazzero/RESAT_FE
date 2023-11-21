@@ -1,6 +1,6 @@
 # RESAT_FE
 RESAT 프론트앤드 개발 챌린지 5기 레포지토리<br>
-<a href="https://github.com/haazzero/RESAT_FE/tree/main/index.html">총 배포 페이지</a>
+<a href="https://github.com/haazzero/RESAT_FE">총 배포 페이지</a>
 
 ## 미션 수행 일정
 |Day|미션|
