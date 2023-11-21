@@ -20,3 +20,7 @@ RESAT 프론트앤드 개발 챌린지 5기 레포지토리
 #### day6
 - <a href="https://github.com/haazzero/RESAT_FE/tree/main/day6">🎞 day6 :이미지 슬라이드 (캐러셀) 만들기 1 소스코드</a>
 - <a href="https://haazzero.github.io/RESAT_FE/day6/carousel.html">🎞 day6 : 이미지 슬라이드 (캐러셀) 만들기 1 체험하기</a>
+
+#### day7
+- <a href="https://github.com/haazzero/RESAT_FE/tree/main/day7">🎞 day6 :이미지 슬라이드 (캐러셀) 만들기 2 소스코드</a>
+- <a href="https://haazzero.github.io/RESAT_FE/day7/">🎞 day6 : 이미지 슬라이드 (캐러셀) 만들기 2 체험하기</a>
