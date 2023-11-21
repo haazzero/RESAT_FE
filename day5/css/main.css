@@ -1,30 +1,169 @@
 @import url(./reset.css);
 
-
-.headhunting-description {
-  width: 100%;
-  flex-shrink: 1;
-  font-size: 21px;
-  word-break: keep-all;
-  color: rgb(255, 255, 255);
+/* M class---------------------------------------------------------- */
+.mClass-container {
+  margin-top: 60px;
 }
 
-.banner-text-area {
-  padding: 39px 20px;
+.mClass-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.mClass-card {
+  position: relative;
+  box-shadow: 0px 4px 8px 0px rgba(26, 27, 28, 0.12);
+}
+
+.mClass-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.mClass-price {
+  position: relative;
+  margin-top: -5px;
+  padding: 5px 15px;
+  background-color: #f0f3f3;
+  color: #384040;
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.mClass-info {
+  padding: 10px;
+}
+
+.mClass-info span {
+  font-size: 12px;
+  color: grey;
+}
+
+.mClass-title {
+  margin: 4px 0;
+  font-size: 14px;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mClass-people {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1bc481;
+}
+
+.mClass-text {
   display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
   align-items: center;
-  box-sizing: border-box;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+  justify-content: space-between;
 }
 
+.mClass-text span:first-child {
+  color: #1bc481;
+}
+/*  M class---------------------------------------------------------- */
+
+/* folio ------------------------------------------------------------ */
+.folio-container {
+  margin-top: 60px;
+}
+
+.folio-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.folio-card {
+  position: relative;
+  box-shadow: 0px 4px 8px 0px rgba(26, 27, 28, 0.12);
+}
+
+.folio-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.folio-info {
+  padding: 10px;
+}
+
+.folio-info label {
+  padding: 3px 6px;
+  margin-right: 4px;
+  color: rgb(147, 153, 153);
+  background-color: rgb(240, 243, 243);
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.folio-info div {
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: rgb(147, 153, 153);
+}
+
+.user-image {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 100%;
+}
+
+.folio-price {
+  display: flex;
+  justify-content: flex-end;
+}
+/* folio ------------------------------------------------------------ */
+
+
+/* banner ----------------------------------------------------------- */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
+  padding: 0 60px;
+  border-radius: 5px;
+  background-size: contain;
+  background-image: url("https://miniintern.com/static/images/main/headhunting_banner_pc.png");
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+}
+
+.banner strong {
+  font-weight: 700;
+}
+
+.banner button {
+  width: 140px;
+  padding: 12px 0;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  background: #ffffff40;
+  border-radius: 24px;
+}
+
+/*  */
 
 .inner {
   width: var(--section-inner);
@@ -127,6 +266,17 @@ main section > hgroup > div a {
 main section > hgroup > div a span {
   color: var(--main-color);
   margin-left: var(--text-margin);
+}
+
+main section > div h3 {
+  margin-bottom: 30px;
+}
+main section > div a span {
+  color: var(--main-color);
+  margin-left: var(--text-margin);
+}
+main section > div a {
+  float: right;
 }
 
 /* MAIN - section1 */
@@ -418,16 +568,8 @@ footer .inner .address span {
   header .inner #logo .pc {
     display: none;
   }
-  header .inner #logo .mobile {
-    display: block;
-  }
   header .inner .gnb.pc {
     display: none;
-  }
-  header .inner .gnb.mobile {
-    display: block;
-    flex-grow: 0;
-    cursor: pointer;
   }
 
   /* 1024 - main */
@@ -529,44 +671,5 @@ footer .inner .address span {
   }
   footer .address span {
     margin-top: 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  /* 768 - main */
-  main .section4 .grid-container {
-    grid-template-columns: 1fr;
-  }
-
-  main .section2.intern .grid-container {
-    grid-template-columns: 1fr;
-  }
-
-  main .section3.service {
-    flex-direction: column-reverse;
-    padding: 0;
-  }
-  main .section3.service .desc {
-    padding: 40px 0 20px;
-  }
-  main .section3.service .desc p {
-    font-size: var(--subtitle-font-size-m);
-  }
-  main .section3.service .desc h2 {
-    font-size: var(--title-font-size-m);
-  }
-  main .section3.service .service-slider {
-    width: 100%;
-    height: auto;
-  }
-  main .section3.service .service-slider img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* 768 - footer */
-  footer .site-area .site-menu {
-    justify-content: space-between;
   }
 }
