@@ -23,6 +23,7 @@
 }
 
 .carousel-slide {
+  position: relative;
   flex: 0 0 100%;
   width: 330px;
   height: 220px;
@@ -38,6 +39,17 @@
   font-size: 24px;
   font-weight: 700;
   color: white;
+}
+
+.slide-tagtext {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  opacity: 70%;
 }
 
 .carousel-dots {
@@ -445,21 +457,25 @@ let slideList = [
     id: 1,
     color: "#17a1ff",
     text: "고객 데이터 분석으로<br/> 고객 중심 서비스 제공하기",
+    tagtext: "#데이터 #분석",
   },
   {
     id: 2,
     color: "#1bc481",
     text: "기업 유튜브 채널로<br/>10만 구독자 모으기 (2탄)",
+    tagtext: "#유투브 #콘텐츠 #기획",
   },
   {
     id: 3,
     color: "#1bc481",
     text: "기업 유튜브 채널로<br/>10만 구독자 모으기 (1탄)",
+    tagtext: "#유투브 #콘텐츠 #기획",
   },
   {
     id: 4,
     color: "#384040",
     text: "신규 입사자의 적응을<br/>돕는 효과적인 온보딩<br/>프로그램 알아보기",
+    tagtext: "",
   },
 ];
 
@@ -472,14 +488,18 @@ const slideSpeed = 300;
 slideList.forEach((item) => {
   const slide = document.createElement("div");
   const text = document.createElement("p");
+  const tagtext = document.createElement("span")
 
   slide.className = "carousel-slide";
   text.className = "slide-text";
+  tagtext.className = "slide-tagtext"
 
   slide.style.backgroundColor = item.color;
   text.innerHTML = item.text;
+  tagtext.innerHTML = item.tagtext;
 
   slide.appendChild(text);
+  slide.appendChild(tagtext);
   slidesContainer.appendChild(slide);
 });
 
