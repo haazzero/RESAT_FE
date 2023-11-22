@@ -38,3 +38,7 @@ RESAT 프론트앤드 개발 챌린지 5기 레포지토리 : <a href="https://h
 #### day7
 - <a href="https://github.com/haazzero/RESAT_FE/tree/main/day7">🎞 day7 :이미지 슬라이드 (캐러셀) 만들기 2 소스코드</a>
 - <a href="https://haazzero.github.io/RESAT_FE/day7/carousel_2.html">🎞 day7 : 이미지 슬라이드 (캐러셀) 만들기 2 체험하기</a>
+
+#### day8
+- <a href="https://github.com/haazzero/RESAT_FE/tree/main/day8">✨ day8 : 만들어진 슬라이드 5일차 미니인턴 클론 페이지에 붙이기 소스코드</a>
+- <a href="https://haazzero.github.io/RESAT_FE/day8/miniintern.html">✨ day8 : 만들어진 슬라이드 5일차 미니인턴 클론 페이지에 붙이기 체험하기</a>
