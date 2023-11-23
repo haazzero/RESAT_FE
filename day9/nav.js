@@ -1,6 +1,18 @@
+//JavaScript를 사용해 메뉴 기능 추가
 function onMenuClick() {
     var navbar = document.getElementById('navigation-bar');
-    var responsive_class_name = 'responsive'
+    var icon = document.getElementById('icon');
+    var responsiveClassName = 'responsive';
+    var openIconClassName = 'fa fa-bars';
+    var closeIconClassName = 'fa fa-times';
   
-    navbar.classList.toggle(responsive_class_name)
+    navbar.classList.toggle(responsiveClassName); //클래스명 토글
+  
+    if (navbar.classList.contains(responsiveClassName)) { //반응형 클래스명이 추가되면
+        icon.className = icon.className.replace(openIconClassName, closeIconClassName); //햄버거를 X로 바꾸기
+    } else {
+        icon.className = icon.className.replace(closeIconClassName, openIconClassName);
+    }
   }
+  
+  
