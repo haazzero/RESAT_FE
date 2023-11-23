@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive navigation bar</title>
+    <link href="nav.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="page-header">
+        <!-- PHONE -->
+        <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <!-- DESKTOP -->
+        <div id="navigation-bar" class="nav-bar">
+          <a class="active"> HOME </a>
+          <a>About</a>
+          <a>Contact</a>
+          <a>FAQ</a>
+        </div>
+    </div>
+    <script src="nav.js"></script>
+</body>
+</html>

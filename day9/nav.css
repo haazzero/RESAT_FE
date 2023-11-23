@@ -1,0 +1,61 @@
+:root {
+    --bgcolor: #242582;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .page-header {
+    background-color: var(--bgcolor);
+    padding: 1.3rem;
+  
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav-bar a {
+    color: white;
+    padding: 1.3rem;
+    cursor: pointer;
+  }
+  
+  .nav-bar a:hover {
+    background-color: #5052db;
+  }
+  
+  .nav-bar a.active {
+    background-color: #f64c72;
+  }
+  
+  .menu-icon {
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-bar {
+        display: none;
+        position: absolute;
+        top: 3.7rem;
+        left: 0;
+        width: 100%;
+        background-color: var(--bgcolor);
+        text-align: center;
+    }
+  
+    .nav-bar.responsive {
+        display: block;
+    }
+  
+    .nav-bar a {
+        display: block;
+    }
+  
+    .menu-icon {
+        display: block;
+        z-index: 1;
+    }
+  }
