@@ -1,6 +1,6 @@
 # 미션 - 반응형 네비게이션 & 메뉴바 만들기
-<a href="https://haazzero.github.io/RESAT_FE/day9/.html">체험 해보기</a>
-<img src=".png">
+<a href="https://haazzero.github.io/RESAT_FE/day9/nav.html">체험 해보기</a>
+<img src="exNav.png">
 
 ## 🔍 요청사항
 - [v] Home, About, Contact, FAQ 네 가지의 메뉴가 존재합니다.
