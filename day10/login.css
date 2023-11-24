@@ -8,7 +8,7 @@ body{ font-family: 'Giants-Bold', sans-serif; }
 
   .container{
     margin-left: 40%;
-    margin-top: 10%;
+    margin-top: 7%;
   }
   
   .login-content{
@@ -127,4 +127,10 @@ body{ font-family: 'Giants-Bold', sans-serif; }
 
   #loginBtn{
     margin-top: 30px;
+  }
+
+  #message {
+    margin-bottom: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* 투명도 변경 시 부드러운 페이드 아웃 효과 적용 */
   }

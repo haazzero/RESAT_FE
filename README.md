@@ -44,5 +44,9 @@ RESAT 프론트앤드 개발 챌린지 5기 레포지토리 : <a href="https://h
 - <a href="https://haazzero.github.io/RESAT_FE/day8/miniintern.html">✨ day8 : 만들어진 슬라이드 5일차 미니인턴 클론 페이지에 붙이기 체험하기</a>
 
 #### day9
-- <a href="https://github.com/haazzero/RESAT_FE/tree/main/day9">💫 day9 : 반응형 네비게이션 & 메뉴바 만들기</a>
-- <a href="https://haazzero.github.io/RESAT_FE/day9/nav.html">💫 day9 : 반응형 네비게이션 & 메뉴바 만들기</a>
+- <a href="https://github.com/haazzero/RESAT_FE/tree/main/day9">💫 day9 : 반응형 네비게이션 & 메뉴바 만들기 소스코드</a>
+- <a href="https://haazzero.github.io/RESAT_FE/day9/nav.html">💫 day9 : 반응형 네비게이션 & 메뉴바 만들기 체험하기 </a>
+
+#### day10
+- <a href="https://github.com/haazzero/RESAT_FE/tree/main/day10">💫 day10 : 로그인 페이지 소스코드 </a>
+- <a href="https://haazzero.github.io/RESAT_FE/day10/login.html">💫 day10 : 로그인 페이지 체험하기 </a>
