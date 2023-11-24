@@ -31,7 +31,7 @@ loginButton.addEventListener("click", (event) => {
     const id = loginForm.id.value;
     const password = loginForm.password.value;
 
-    if (id === "admin" && password === "1111") {
+    if (id === "jae" && password === "0612") {
         loginMessage.textContent = "로그인 되었습니다.";
         loginMessage.classList.remove("alert-danger");
         loginMessage.classList.add("alert-success");
