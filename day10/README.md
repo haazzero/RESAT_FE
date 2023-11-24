@@ -1,6 +1,6 @@
 # 미션 - 로그인 페이지 만들기
 <a href="https://haazzero.github.io/RESAT_FE/day10/login.html">체험 해보기</a>
-<img src=".png">
+<img src="exLogin.png">
 
 ## 🔍 요청사항
 - [v] ID,PW 값을 임의로 지정합니다.
