@@ -44,9 +44,6 @@ loginButton.addEventListener("click", (event) => {
         // 아이디와 비밀번호 입력 필드 초기화
         loginForm.id.value = "";
         loginForm.password.value = "";
-       
-        //alert("로그인 되었습니다.");
-        //location.reload();
 
     } else { //로그인 실패 시 
         loginMessage.textContent = "ID 혹은 PW가 잘못되었습니다.";

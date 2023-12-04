@@ -1,4 +1,3 @@
-//JavaScript를 사용해 메뉴 기능 추가
 function onMenuClick() {
     var navbar = document.getElementById('navigation-bar');
     var icon = document.getElementById('icon');
